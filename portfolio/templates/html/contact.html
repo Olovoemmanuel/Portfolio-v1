@@ -1,0 +1,79 @@
+{%extends 'html/base.html'%}
+{%load static%}
+{%block content%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{%static 'css/contact.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Shippori+Antique&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="contact_section">
+        <div class="menu-contact">
+            <h1>contact <span style="color:#046d33;">Me</span></h1>
+            <h3><span style="color: #046d33;">Get</span> In Touch</h3>
+        </div>
+        <div class="container">
+            <div class="msg_info">
+                <h1>message me</h1>
+                <form action="/content/contact" method="POST">
+                    {%csrf_token%}
+                    <div class="name_email">
+                        <div>
+                            <div><input type="text" placeholder="Enter your name" maxlength="10" name="name" required></div>
+                            {% if nameErrs%}{% for nameErr in nameErrs%}<div class="errMsg">{{nameErr}}</div>{% endfor %}{% endif %}                          
+                        </div>
+                        <div>
+                            <div><input type="text" placeholder="Enter your Email" maxlength="64" name="email" required></div>
+                            {% if emailErrs%}{% for emailErr in emailErrs%}<div class="errMsg">{{emailErr}}</div>{% endfor %}{% endif %}
+                        </div>
+                    </div>
+                    <div class="subject_msg"><input type="text" placeholder="Subject of message" maxlength="100" name="subject" required value="Website Inquiry"></div>
+                    <div><textarea name="message" id="" cols="100%" rows="7" placeholder="Enter your message..." maxlength="550" required></textarea></div>
+                    <div class="btn"><button>submit</button></div>
+                </form>
+                {% if messages %}
+                    {% for message in messages%}
+                    <script>
+                        alert('Message sent succesfully')
+                    </script>
+                    {% endfor %}
+	            {% endif %}
+            </div>
+
+            <div class="contact_info">
+                <h1>contact info</h1>
+                <div>
+                    <div class="icon"><img src="{%static 'icons/icon-name.webp' %}" alt=""></div>
+                    <div class="info">
+                        <h1>name</h1>
+                        <p>olovo okechukwu</p>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="icon"><img src="{%static 'icons/icon-location.webp' %}" alt=""></div>
+                    <div class="info">
+                        <h1>location</h1>
+                        <p>lagos state nigeria</p>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="icon"><img src="{%static 'icons/icon-email.webp' %}" alt=""></div>
+                    <div class="info">
+                        <h1>email</h1>
+                        <p>olovoemmanuel@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {%include 'html/footer.html'%}
+</body>
+</html>
+{%endblock%}

@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* styling the contact section */
+.menu-contact{
+    text-align: center;
+    color: white;
+    margin-bottom: 3rem;
+}
+
+.menu-contact h1{
+    font-size: 2.5rem;
+    padding-bottom: 1rem;
+    font-family: Shippori Antique,sans-serif;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.menu-contact h3{
+    font-size: 1.2rem;
+    font-family: Shippori Antique,sans-serif;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: capitalize;
+}
+
+/* styling the container that holds the message info and contact info */
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin-inline: 7rem;
+}
+/* styling the message info part */
+.msg_info h1 {
+    text-align: center;
+    text-transform: capitalize;
+    color: white;
+    font-family: Shippori Antique,sans-serif;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+input, textarea {
+    background-color: black;
+    font-family: Shippori Antique,sans-serif;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.8);
+    border: 0;
+    border-radius: 5px;
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+}
+
+textarea {
+    padding:0.6rem 0 0 0.7rem ;
+    margin-bottom: 2rem;
+    max-width: 650px;
+}
+
+.name_email{
+    display: flex;
+    margin-bottom: 2rem;
+}
+.name_email > div:nth-of-type(1){
+    margin-right: 2.5rem;
+}
+.name_email input {
+    padding:0.6rem 0 0.6rem 0.7rem ;
+}
+.errMsg {
+    color: rgb(211, 62, 62);
+    font-size: 12px;
+    font-family: Shippori Antique,sans-serif;
+    padding-left: 0.7rem;
+}
+
+.subject_msg {
+    margin-bottom: 1.5rem;
+}
+.subject_msg input {
+    padding:0.6rem 0 0.6rem 0.7rem ;
+}
+
+.btn {
+    text-align: center;
+}
+
+button {
+    background-color: #046d33;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 0.6rem 1.8rem;
+    border-radius: 5px;
+    font-family: Shippori Antique,sans-serif;
+    border: none;
+    font-size: 16px;
+}
+
+/* styling the contact info */
+.contact_info {
+    margin-left: 3rem;
+}
+
+.contact_info > div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    margin-right: 2rem;
+}
+.contact_info > h1 {
+    text-transform: capitalize;
+    text-align: center;
+    color: white;
+    margin-bottom: 2rem;
+    font-family: Shippori Antique,sans-serif;
+    font-weight: 400;
+}
+
+.icon {
+    margin-right: 1.5rem;
+}
+
+.info h1 {
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: capitalize;
+    font-family: Shippori Antique,sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.info p {
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: capitalize;
+    font-family: Shippori Antique,sans-serif;
+    font-weight: 200;
+    font-size: 13px;
+}
+
+/* media query for the contact section */
+@media(max-width:850px){
+    .container {
+    margin-inline: 2rem;
+    transition: all 0.3s ease;
+}
+}
+@media(max-width:700px){
+    .container{
+        flex-direction: column;
+        margin-inline: 3.1rem;
+    }
+    .msg_info {
+        margin-bottom: 4rem;
+    }
+    .contact_info > div {
+        margin-right: 0;
+    }
+    .contact_info {
+        max-width: 90vw;
+        margin: 0 auto;
+        margin-bottom: -3rem;
+    }
+}
+@media(max-width:550px){
+    .container{
+        margin-inline: 1.6rem;
+    }
+}
+@media(max-width:375px){
+    .menu-contact h1{
+        font-size: 2.2rem;
+    }
+}
+
+

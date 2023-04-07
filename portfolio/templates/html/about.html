@@ -1,0 +1,108 @@
+{%extends 'html/base.html'%}
+{%load static%}
+{%block  content%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{%static 'css/about.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Shippori+Antique&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="main-menu">
+        <div class="menu-about">
+            <h1>About <span style="color:#046d33;">Me</span></h1>
+            <h3>Get to Know <span style="color: #046d33;">me.</span></h3>
+        </div>
+    
+        <div class="container">
+            <div>
+                <h1>I'm a Full Stack Developer</h1>
+                <p>I started my coding journey in 2016, when i got admitted into Abia state university, department of computer science. </p>
+                <p>Over the years I've successfully developed custom solutions to solve challenges and engineered designs to meet predetermined functionality goals.</p>
+                <p>— Strengths: Debugging, Writing Logic, Abstraction. Coding and Tech is so fun and I looveeeee debugging and fixing bugs.</p>
+                <div class="btn"><a href="{%url 'myportfolio:myresume' %}">Go to Cv</a></div>
+            </div>
+            <div ><img src="{% static 'icons/my-nft.webp' %}" alt=""></div>
+        </div>
+
+        
+    </section>
+    <section class="services">
+        <div class="my-services"><h1><span style="color: #046d33;">my</span> services</h1></div>
+
+        <div class="grid-container">
+            <div class="item">
+                <div><img src="{%static 'icons/services-debug.svg' %}" alt=""></div>
+                <h1>Debugging</h1>
+                <p>Debugging is the process of detecting and removing of existing and potential errors (bugs) in a software code that can cause it to behave unexpectedly or crash.</p>
+            </div>
+
+            <div class="item">
+                <div><img src="{%static 'icons/services-api.svg' %}" alt=""></div>
+                <h1>API Development</h1>
+                <p>API (Application Programming Interface software) is a set of instructions, standards or requirements that enables a software or app to employ features/services of another app</p>
+            </div>
+
+            <div class="item">
+                <div><img src="{%static 'icons/services-deploy.svg' %}" alt=""></div>
+                <h1>Deployment</h1>
+                <p>Deploying projects/sites and apps to live servers using tools like Azure, AWS, Heroku, Netlify, Vercel, Google Play Console</p>
+            </div>
+        </div>
+    </section>
+    <section class="skills-section">
+        <div class="skills-header">
+            <h1>My <span style="color: #046d33;">skills</span></h1>
+        </div>
+        <div class="skills-wrapper">
+            <div class="skills">
+                <div class="skills-text">HTML /CSS</div>
+                <div class="innertext-cover"><div class="inner-text" style="width: 95%;">95%</div></div>
+            </div>
+
+            <div class="skills">
+                <div class="skills-text">Bootstrap</div>
+                <div class="innertext-cover"><div class="inner-text" style="width: 90%;">90%</div></div>
+            </div>
+
+            <div class="skills">
+                <div class="skills-text">Javascript</div>
+                <div class="innertext-cover"><div class="inner-text" style="width: 90%;">90%</div></div>
+            </div>
+
+            <div class="skills">
+                <div class="skills-text">Python</div>
+                <div class="innertext-cover"><div class="inner-text" style="width: 90%;">90%</div></div>
+            </div>
+
+            <div class="skills">
+                <div class="skills-text">Django</div>
+                <div class="innertext-cover"><div class="inner-text" style="width:90%;">90%</div></div>
+            </div>
+
+            <div class="skills">
+                <div class="skills-text">SqLite</div>
+                <div class="innertext-cover"><div class="inner-text" style="width: 88%;">88%</div></div>
+            </div>
+
+            <div class="skills">
+                <div class="skills-text">Documentation</div>
+                <div class="innertext-cover"><div class="inner-text" style="width: 88%;">88%</div></div>
+            </div>
+
+            <div class="skills">
+                <div class="skills-text">Git / GitHub</div>
+                <div class="innertext-cover"><div class="inner-text" style="width: 90%;">90%</div></div>
+            </div>
+            
+        </div>
+    </section>
+    {%include 'html/footer.html'%}
+    <script src="{%static 'javascript/about.js' %}"></script>
+</body>
+</html>
+{%endblock%}

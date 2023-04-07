@@ -1,0 +1,39 @@
+{%extends 'html/base.html'%}
+{%load static%}
+{%block content%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{%static 'css/home.css' %}">
+</head>
+
+
+<body>
+    <section>
+        <div class="cover">
+            <div class="my_handle">
+                <ul>
+                    <li><a href=""><img src="{%static 'icons/social-icon-instagram.svg' %}" alt="" width="21px"></a></li>
+                    <li><a href="https://github.com/olovoemmanuel"><img src="{%static 'icons/social-icon-github.svg' %}" alt="" width="21px"></a>
+                    <li><a href="http://www.linkedin.com/in/okechukwu-emmanuel-49a0a2245"><img src="{%static 'icons/social-icon-linkedin.svg' %}" alt="" width="21px"></a></li>
+                    <li><a href="https://twitter.com/OlovoEmmanuel"><img src="{%static 'icons/social-icon-twitter.svg' %}" alt="" width="21px"></a></li>
+                </ul>
+            </div>
+            <div class="profile">
+                <h1><span style="color: #046d33;">olovo</span> okechukwu .e</h1>
+                <div>
+                    <h2 style="color: rgba(255, 255, 255, 0.8);">I'm</h2> 
+                    <h2 id="typewriter"></h2> 
+                    <span class="cursor"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="{%static 'javascript/home.js' %}"></script>
+</body>
+</html>
+{%endblock%}

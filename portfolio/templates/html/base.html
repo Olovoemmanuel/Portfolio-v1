@@ -1,0 +1,47 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{%static '/css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header> 
+        <div class="menu">
+            <!-- <h1 class="logo">Logo</h1> -->
+            <div class="logo"><img src="{%static 'icons/logo.jpg' %}" alt=""></div>
+            <div class="submenu_cover">
+                <div class="sub_menu">
+                    <div class="submenu-top">
+                        <div class="logo"><img src="{%static 'icons/logo2.jpg' %}" alt=""></div>
+                        <div class="hamburger2"><img src="{%static '/icons/icon-close-menu.svg' %}" alt=""></div>
+                    </div>
+                    <div class="link_title_cover">
+                        <h1 class="link_title"></h1>
+                    </div>
+                    <nav class="main_nav">
+                        <ul class="child_nav">
+                            <li><a href="{%url 'myportfolio:homepage' %}">Home</a></li>
+                            <li><a href="{%url 'myportfolio:aboutpage' %}">About</a></li>
+                            <li><a href="{%url 'myportfolio:myprojects' %}">Portfolio</a></li>
+                            <li><a href="{%url 'myportfolio:contactpage' %}">Contact</a></li>
+                        </ul>
+                    </nav>        
+                </div>
+            </div>
+
+            <div class="hamburger"><img src="{%static '/icons/icon-menu.svg' %}" alt=""></div>
+        </div>   
+    </header>
+    {%block content%}
+    {%endblock%}
+    
+    <script src="{%static '/javascript/app.js' %}"></script>
+</body>
+
+</html>

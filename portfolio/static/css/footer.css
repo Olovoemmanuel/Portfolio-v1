@@ -1,0 +1,24 @@
+/* footer section */
+footer {
+    background-color: #046d33;
+    margin-top: 6rem;
+    padding-block: 1rem;
+}
+
+footer h1 {
+    text-align: center;
+    color: white;
+    font-size: 17px;
+    padding-bottom: 0.2rem;
+    font-family: Shippori Antique,sans-serif;
+    font-weight: 400;
+}
+
+footer h3 {
+    text-align: center;
+    color: white;
+    font-size: 13px;
+    text-decoration: underline;
+    font-family: Shippori Antique,sans-serif;
+    font-weight: 400;
+}

@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    padding-left: 5rem;
+}
+
+.my_handle {
+    position:  absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+
+.profile {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    width: 700px;
+}
+
+.profile h1 {
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: capitalize;
+    font-family: Shippori Antique,sans-serif;
+    font-weight: 600;
+    font-size: 62px;
+    text-align: center;
+    line-height: 5rem;
+}
+
+
+.my_handle li{
+    margin-bottom: 1.5rem;
+}
+
+.profile div{
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.profile div h2 {
+    text-align: center;
+    font-size: 30px;
+    font-family: Shippori Antique,sans-serif;
+    font-weight: 400;
+}
+.profile h2:nth-of-type(2) {
+    color: #046d33;
+}
+
+.profile h2:nth-of-type(1){
+    margin-right: 0.5rem;
+    font-weight: 400;
+}
+
+.cursor {
+	border-left: 3px solid #046d33;
+}
+
+
+@media(max-width:880px){
+    .my_handle {
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+    }
+    .my_handle ul {
+        display: flex;
+        gap: 1.5rem;
+    }
+    .profile {
+        width: 100%;
+    }
+}
+
+
+@media(max-width:375px){
+    .profile h1 {
+        font-size: 55px;
+    }
+}

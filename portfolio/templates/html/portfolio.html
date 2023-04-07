@@ -1,0 +1,41 @@
+{%extends 'html/base.html'%}
+{%load static%}
+{%block  content%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{%static 'css/portfolio.css' %}">
+</head>
+<body>
+   <section class="wrapper">
+        <div class="root">
+            <h1><span style="color: #046d33;">My</span> Portfolio</h1>
+            <h2>Some Of the <span style="color: #046d33;">Works / Projects</span> I've done.</h2>
+        </div>
+        <div class="projects_section"></div>
+   </section>
+   <section class="section2">
+    {%for x in project%}
+    <div class="prj_container">
+        <div class="div_img">
+            <img src="/media/{{x.image}}" alt="">
+        </div>
+        <div class="info">
+            <div>
+                <h1>{{x.Project_name}}</h1>
+                <p>{{x.description}}</amet></p>
+                <p><a href="{{x.website_link}}">View Details</a></p>
+            </div>
+        </div>
+    </div>
+    {%endfor%}
+   </section>
+   {%include 'html/footer.html'%}
+</body>
+</html>
+{%endblock%}
+
