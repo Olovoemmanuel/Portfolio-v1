@@ -5,6 +5,9 @@ from django.conf import settings
 from django.http import HttpResponse
 import re
 from django.contrib import messages
+import os
+import dotenv 
+dotenv.read_dotenv()
 
 
 # Create your views here.
@@ -33,7 +36,7 @@ def Contactpage(request):
                     subject,
                     f'Name: {name}\nEmail: {from_email}\nMessage: {message}',
                     from_email,
-                    ['admin@yahoo.com'],
+                    [os.getenv('ADMIN_EMAIL')],
                     fail_silently=False,
                 )
                 messages.success(request, 'Form was submitted successfully')
