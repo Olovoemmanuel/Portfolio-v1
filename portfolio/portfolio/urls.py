@@ -20,6 +20,5 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('content/', include('myportfolio.urls', namespace='myportfolio')),
     path('', include('myportfolio.urls', namespace='myportfolio')),
 ]+ static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
