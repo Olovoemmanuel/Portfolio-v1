@@ -6,6 +6,10 @@ from django.http import HttpResponse
 import re
 from django.contrib import messages
 import os
+from dotenv import load_dotenv
+load_dotenv()
+
+
 
 
 # Create your views here.
@@ -31,10 +35,10 @@ def Contactpage(request):
         if name and from_email and subject and message:
             try:
                 send_mail(
-                    subject,
+                    'website enquiry',
                     f'Name: {name}\nEmail: {from_email}\nMessage: {message}',
                     from_email,
-                    ['admin@yahoo.com'],
+                    [os.getenv('EMAIL')],
                     fail_silently=False,
                 )
                 messages.success(request, 'Form was submitted successfully')
